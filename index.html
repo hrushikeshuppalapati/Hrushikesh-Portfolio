@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav>
-      <!-- HU Logo: Always returns you to the About page -->
+   
       <div
         class="logo-container"
         onclick="showSection('about')"
@@ -17,12 +17,11 @@
         <span class="hu-logo">H</span><span class="hu-logo">U</span>
       </div>
       <ul id="navList">
-        <!-- Sidebar items: About and Education (plus your other sections) -->
         <li class="active">
           <a href="#" onclick="showSection('about')">About</a>
         </li>
         <li>
-          <a href="#" onclick="showSection('education')">Education</a>
+          <a href="#" onclick="showSection('Skills')">Skills</a>
         </li>
         <li>
           <a href="#" onclick="showSection('projects')">Projects</a>
@@ -31,8 +30,9 @@
           <a href="#" onclick="showSection('Experience')">Experience</a>
         </li>
         <li>
-          <a href="#" onclick="showSection('Skills')">Skills</a>
+          <a href="#" onclick="showSection('education')">Education</a>
         </li>
+
         <li>
           <a href="#" onclick="showSection('Certifications')">Certifications</a>
         </li>
@@ -46,7 +46,6 @@
       </ul>
     </nav>
 
-    <!-- ABOUT SECTION (Default Page) -->
     <div id="about" class="section">
       <div class="header">
         <div class="contact-header-info">
@@ -113,8 +112,17 @@
           <div class="edu-inner">
             <!-- Front Side: Displays Education Level -->
             <div class="edu-front" onclick="flipEduCard(event, this)">
-              <h2>Graduate Education</h2>
+              <img src="gwu.png" alt="GW Logo" class="edu-logo" />
+              <div class="edu-middle">
+                <h1>Graduate Education</h1>
+                <h2>Master's in Data Science</h2>
+              </div>
+              <div class="edu-footer">
+                <p>George Washington University, US</p>
+                <span>2023 – 2025</span>
+              </div>
             </div>
+
             <!-- Back Side: Displays Education Details -->
             <div class="edu-back" onclick="flipEduCard(event, this)">
               <p><strong>Institution:</strong> George Washington University</p>
@@ -134,8 +142,17 @@
           <div class="edu-inner">
             <!-- Front Side: Displays Education Level -->
             <div class="edu-front" onclick="flipEduCard(event, this)">
-              <h2>Undergraduate Education</h2>
+              <img src="vit.png" alt="VIT Logo" class="edu-logo" />
+              <div class="edu-middle">
+                <h1>Undergraduate Education</h1>
+                <h2>B.Tech in CSE (AI)</h2>
+              </div>
+              <div class="edu-footer">
+                <p>Vellore Institute of Technology, India</p>
+                <span>2019 – 2023</span>
+              </div>
             </div>
+
             <!-- Back Side: Displays Education Details -->
             <div class="edu-back" onclick="flipEduCard(event, this)">
               <p>
@@ -156,7 +173,6 @@
         </div>
       </div>
     </div>
-
     <!-- PROJECTS SECTION -->
     <div id="projects" class="section" style="display: none">
       <div class="projects-section">
@@ -164,7 +180,7 @@
         <div class="project-card">
           <h2>
             <a
-              href="https://github.com/"
+              href="https://github.com/hrushikeshuppalapati"
               target="_blank"
               style="
                 text-decoration: underline;
@@ -174,9 +190,13 @@
               onmouseover="this.style.color='#004e99';"
               onmouseout="this.style.color='#0077cc';"
             >
-              ⚡📊 Energy Consumption Forecasting
+              ⚡📊 Energy Consumption Forecasting using AWS
             </a>
           </h2>
+          <p class="project-meta">
+            George Washington University, US | Fall 2024
+          </p>
+
           <li>
             Built ML models (Random Forest, AutoML) on AWS to predict energy
             usage from 1973 to 2024.
@@ -206,6 +226,10 @@
               📊🌍 Global Energy Trends and Impact
             </a>
           </h2>
+          <p class="project-meta">
+            George Washington University, US | Spring 2024
+          </p>
+
           <li>
             Connected four datasets (global electricity use, regional
             disparities, energy source mix, CO₂ emissions) into a single
@@ -228,6 +252,51 @@
         <div class="project-card">
           <h2>
             <a
+              href="https://github.com/hrushikeshuppalapati/Analyzing-Electric-Vehicle-EV-Adoption-Across-U.S.-Regions"
+              target="_blank"
+              style="
+                text-decoration: underline;
+                color: #0077cc;
+                transition: color 0.2s ease;
+              "
+              onmouseover="this.style.color='#004e99';"
+              onmouseout="this.style.color='#0077cc';"
+            >
+              📊🚗 Electric Vehicle (EV) Adoption Analysis Across U.S. Regions
+            </a>
+          </h2>
+          <p class="project-meta">
+            George Washington University, US | Fall 2023
+          </p>
+
+          <li>
+            Explored regional EV adoption patterns across the U.S. using a large
+            real-world dataset, identifying growth trends and regional
+            disparities using SMART questions.
+          </li>
+          <li>
+            Cleaned and preprocessed 12,000+ records, mapped states to U.S.
+            regions, and engineered features like EV type and year to prepare
+            the data for meaningful insights.
+          </li>
+          <li>
+            Visualized adoption trends with Seaborn and Matplotlib, revealing
+            hotspots like California and highlighting policy-driven uptake in
+            the Northeast and West.
+          </li>
+          <li>
+            Validated hypotheses using ANOVA, Chi-square, and T-tests to uncover
+            statistically significant differences between regions and EV types.
+          </li>
+          <li>
+            Built predictive models (OLS & Logistic Regression) to forecast high
+            vs. low EV adoption zones, achieving 81% accuracy using demographic
+            and vehicle factors.
+          </li>
+        </div>
+        <div class="project-card">
+          <h2>
+            <a
               href="https://github.com/Algo-Alchemists/DATS-6101-data-brew"
               target="_blank"
               style="
@@ -241,6 +310,10 @@
               ☕📈 Starbucks Offer Success Prediction
             </a>
           </h2>
+          <p class="project-meta">
+            George Washington University, US | Fall 2023
+          </p>
+
           <li>
             Grouped 17,000+ Starbucks users using K-Means clustering to better
             understand customer types and behaviors.
@@ -270,6 +343,10 @@
               🧠👁️ Facial Feature Detection Using CNN
             </a>
           </h2>
+          <p class="project-meta">
+            Vellore Institute of Technology, India | 2022
+          </p>
+
           <li>
             Created a real-time face analysis tool that predicts age, gender,
             emotion, and counts eye blinks using CNN.
@@ -422,35 +499,6 @@
             </div>
           </div>
         </div>
-        <div class="cert-card">
-          <div class="cert-inner">
-            <div class="cert-front" onclick="flipCard(event, this)">
-              <h2>Machine Learning Masters</h2>
-              <p>iNeuron</p>
-              <p>Feb 2021</p>
-            </div>
-            <div class="cert-back" onclick="flipCard(event, this)">
-              <img src="" alt="" onclick="openModal(event, '')" />
-            </div>
-          </div>
-        </div>
-        <div class="cert-card">
-          <div class="cert-inner">
-            <div class="cert-front" onclick="flipCard(event, this)">
-              <h2>Introduction to R</h2>
-              <p>Datacamp</p>
-              <p>Sep 9 2023</p>
-              <small>Click to view certificate</small>
-            </div>
-            <div class="cert-back" onclick="flipCard(event, this)">
-              <img
-                src="r.png"
-                alt="Certificate Thumbnail"
-                onclick="openModal(event, 'r.png')"
-              />
-            </div>
-          </div>
-        </div>
 
         <!-- Certification Card 3 -->
         <div class="cert-card">
@@ -493,16 +541,41 @@
         <div class="cert-card">
           <div class="cert-inner">
             <div class="cert-front" onclick="flipCard(event, this)">
+              <h2>Introduction to R</h2>
+              <p>Datacamp</p>
+              <p>Sep 9 2023</p>
+              <small>Click to view certificate</small>
+            </div>
+            <div class="cert-back" onclick="flipCard(event, this)">
+              <img
+                src="r.png"
+                alt="Certificate Thumbnail"
+                onclick="openModal(event, 'r.png')"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-inner">
+            <div class="cert-front" onclick="flipCard(event, this)">
               <h2>Developing Soft Skills and Personalitys</h2>
               <p>NPTEL</p>
               <p>Sep 25 2022</p>
             </div>
             <div class="cert-back" onclick="flipCard(event, this)">
-              <img
-                src=""
-                alt="Certificate Thumbnail"
-                onclick="openModal(event, 'certificate3.jpg')"
-              />
+              <img src="" alt="" onclick="openModal(event, '')" />
+            </div>
+          </div>
+        </div>
+        <div class="cert-card">
+          <div class="cert-inner">
+            <div class="cert-front" onclick="flipCard(event, this)">
+              <h2>Machine Learning Masters</h2>
+              <p>iNeuron</p>
+              <p>Feb 2021</p>
+            </div>
+            <div class="cert-back" onclick="flipCard(event, this)">
+              <img src="" alt="" onclick="openModal(event, '')" />
             </div>
           </div>
         </div>
@@ -745,5 +818,25 @@
       <span class="close" onclick="closeModal()">&times;</span>
       <img class="modal-content" id="modalImage" />
     </div>
+    <script>
+      // Reveal cert cards on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      document.querySelectorAll(".cert-card").forEach((card) => {
+        card.classList.add("hidden");
+        observer.observe(card);
+      });
+    </script>
   </body>
 </html>
