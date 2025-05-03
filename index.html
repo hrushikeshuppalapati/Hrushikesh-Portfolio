@@ -8,7 +8,7 @@
   </head>
   <body>
     <nav>
-   
+      <!-- HU Logo: Always returns you to the About page -->
       <div
         class="logo-container"
         onclick="showSection('about')"
@@ -17,6 +17,7 @@
         <span class="hu-logo">H</span><span class="hu-logo">U</span>
       </div>
       <ul id="navList">
+        <!-- Sidebar items: About and Education (plus your other sections) -->
         <li class="active">
           <a href="#" onclick="showSection('about')">About</a>
         </li>
@@ -46,6 +47,7 @@
       </ul>
     </nav>
 
+    <!-- ABOUT SECTION (Default Page) -->
     <div id="about" class="section">
       <div class="header">
         <div class="contact-header-info">
@@ -177,6 +179,57 @@
     <div id="projects" class="section" style="display: none">
       <div class="projects-section">
         <h1 class="section-title">Projects</h1>
+        <div class="project-card">
+          <h2>
+            <a
+              href="https://github.com/hrushikeshuppalapati/Temperature-Forecasting-Using-TIme-Series-and-ML-Techniques/tree/main"
+              target="_blank"
+              style="
+                text-decoration: underline;
+                color: #0077cc;
+                transition: color 0.2s ease;
+              "
+              onmouseover="this.style.color='#004e99';"
+              onmouseout="this.style.color='#0077cc';"
+            >
+              ⚡📊 Forecasting Temperatures using Time Series and Advanced ML
+              Techniques.
+            </a>
+          </h2>
+          <p class="project-meta">
+            George Washington University, US | Spring 2025
+          </p>
+
+          <li>
+            Developed a robust forecasting system using ARIMA, SARIMA, Random
+            Forest, XGBoost, and LSTM, leveraging both statistical and deep
+            learning approaches for comparison.
+          </li>
+          <li>
+            Engineered advanced features like lag values, rolling averages,
+            seasonal encodings, and week/day-based time markers to capture
+            complex temporal patterns.
+          </li>
+          <li>
+            Performed seasonal decomposition (STL) to isolate trend,
+            seasonality, and noise, improving model interpretability and
+            preprocessing strategy.
+          </li>
+          <li>
+            Conducted city-wise forecasting for 400+ cities using optimized
+            pipelines and visualized results via interactive dashboards (e.g.,
+            Plotly/Streamlit/Tableau).
+          </li>
+          <li>
+            LSTM architecture used 2 hidden layers with dropout and standardized
+            inputs to handle sequence dependencies; achieved better R² despite
+            overfitting challenges.
+          </li>
+          <li>
+            Evaluated models using RMSE, MAE, and R², demonstrating XGBoost’s
+            superior balance of accuracy and efficiency.
+          </li>
+        </div>
         <div class="project-card">
           <h2>
             <a
@@ -563,7 +616,7 @@
               <p>Sep 25 2022</p>
             </div>
             <div class="cert-back" onclick="flipCard(event, this)">
-              <img src="" alt="" onclick="openModal(event, '')" />
+              <img src="nptel.jpg" alt="" onclick="openModal(event, '')" />
             </div>
           </div>
         </div>
